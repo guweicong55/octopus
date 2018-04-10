@@ -1,23 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div>
     <router-view/>
+    <foot-bar></foot-bar>
   </div>
 </template>
 
 <script>
-
-</script>export default {
-name: 'App',
-}
+  import footBar from '@/components/footer/footBar.vue';
+  export default {
+    name: 'App',
+    components: {
+      footBar
+    }
+  }
+</script>
 
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
+
 </style>
