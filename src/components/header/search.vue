@@ -38,9 +38,9 @@
       top: 0;
     }
     .icon {
-      height: 32px;
-      width: 32px;
-      margin-top: 9px;
+      height: 28px;
+      width: 28px;
+      margin-top: 11px;
     }
   }
 </style>
