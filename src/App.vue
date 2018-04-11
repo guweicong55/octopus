@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-view/>
+    <router-view></router-view>
     <foot-bar></foot-bar>
   </div>
 </template>
@@ -15,6 +15,9 @@
   }
 </script>
 
-<style>
+<style lang="less">
+  @import 'style/common.less';
+  h1 {
 
+  }
 </style>
