@@ -17,7 +17,8 @@
 
 <style lang="less">
   @import 'style/common.less';
-  h1 {
-
+  #app {
+    min-height: 100vh;
+    background: rgb(228,233,234);
   }
 </style>
