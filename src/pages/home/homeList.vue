@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul @touchstart="hover($event, '#f4f4f6')" @touchend="hover($event, '#fff')">
     <li class="home_list_item" v-for="item in items" :key="item.id">
       <p class="article_title">
         {{ item.title }}
@@ -22,6 +22,14 @@
         items: {
           type: Array
         }
+      },
+      methods: {
+        hover (e, color) {
+          var item = e.target;
+          if (item.className === 'home_list_item') {
+            item.style.background = color;
+          }
+        },
       }
     }
 </script>
@@ -32,7 +40,7 @@
     margin-bottom: 15px;
     padding: 5vw;
     &:hover {
-      background: #f4f4f4;
+      background: #f4f4f6;
     }
     .article_title {
       font-size: 14px;
