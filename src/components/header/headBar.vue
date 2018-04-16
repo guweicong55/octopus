@@ -18,9 +18,6 @@
 </script>
 <style scoped lang="less">
   #header_bar {
-    position: fixed;
-    z-index: 100;
-    top: 0;
     width: 100vw;
     height: 51px;
     background: #feffff;

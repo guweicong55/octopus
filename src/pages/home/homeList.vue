@@ -39,6 +39,9 @@
     background: #fff;
     margin-bottom: 15px;
     padding: 5vw;
+    &:hover {
+      background: #f4f4f4;
+    }
     .article_title {
       font-size: 14px;
       line-height: 1.5;

@@ -19,9 +19,6 @@
 </script>
 <style scoped lang="less">
   .article_list_wrapper {
-    position: absolute;
-    top: 51px;
-    bottom: 57px;
     width: 100vw;
   }
 </style>

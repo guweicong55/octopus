@@ -1,5 +1,5 @@
 <template>
-  <nav id="foot_bar">
+  <nav id="foot_bar" :class="{ foot_bar_hide: !footBarShow }">
     <ul class="foot_bar_wrapper">
       <li class="foot_bar_items">
         <router-link to="/home" active-class="foot_bar_link_active">
@@ -20,8 +20,15 @@
   </nav>
 </template>
 <script>
+  import { mapState } from 'vuex';
+
   export default {
     name: 'footBar',
+    computed: {
+      ...mapState([
+        'footBarShow'
+      ])
+    },
     data () {
       return {
 
@@ -31,6 +38,9 @@
 </script>
 <style scoped lang="less">
   @import "../../style/common.less";
+  .foot_bar_hide {
+    bottom: -57px !important;
+  }
   #foot_bar {
     position: fixed;
     z-index: 99;
@@ -39,6 +49,7 @@
     height: 57px;;
     background: #feffff;
     border-top: 1px solid #e2e2e2;
+    #baseTransition(1s);
     .foot_bar_wrapper {
       display: block;
       height: 100%;
