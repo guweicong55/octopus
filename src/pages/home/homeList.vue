@@ -1,28 +1,15 @@
 <template>
   <ul>
-    <li class="home_list_item">
+    <li class="home_list_item" v-for="item in items" :key="item.id">
       <p class="article_title">
-        [HMR] Waiting for update signal from WDS...
+        {{ item.title }}
       </p>
       <div class="article_msg_wrapper">
         <span class="photo_img">
           <img src="../../assets/logo.png" alt="">
         </span>
         <span class="article_author">
-          RTmetts-Tyayea
-        </span>
-      </div>
-    </li>
-    <li class="home_list_item">
-      <p class="article_title">
-        [HMR] Waiting for update signal from WDS...
-      </p>
-      <div class="article_msg_wrapper">
-        <span class="photo_img">
-          <img src="../../assets/logo.png" alt="">
-        </span>
-        <span class="article_author">
-          RTmetts-Tyayea
+           {{ item.author }}
         </span>
       </div>
     </li>
@@ -30,7 +17,12 @@
 </template>
 <script>
     export default {
-      name: 'homeList'
+      name: 'homeList',
+      props: {
+        items: {
+          type: Array
+        }
+      }
     }
 </script>
 <style scoped lang="less">
