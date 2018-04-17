@@ -6,7 +6,7 @@ import store from '@/store';
 import MsgComponent from '@/pages/message/msgComponent';
 import HomeComponent from '@/pages/home/homeComponent';
 import meComponent from '@/pages/me/meComponent';
-import articleComponent from '@/pages/article/articleComponent';
+import topicComponent from '@/pages/topic/topicComponent';
 
 Vue.use(Router);
 
@@ -37,9 +37,9 @@ var router = new Router({
           component: meComponent
         },
         {
-          path: '/article/:id',
-          name: 'article',
-          component: articleComponent
+          path: '/topic/:id',
+          name: 'topic',
+          component: topicComponent
         }
       ]
     }
@@ -48,7 +48,7 @@ var router = new Router({
 
 router.beforeEach((to, from, next) => {
   //需要隐藏的页面-对应router的name
-  var pagesName = ['article'];
+  var pagesName = ['topic'];
 
   var flag = pagesName.indexOf(to.name) !== -1 ? false: true;
   store.commit('footBarShow', flag);

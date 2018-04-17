@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li class="home_list_item" v-for="item in items" :key="item.id">
-      <router-link :to="{ path: '/article/' + item.id }">
+      <router-link :to="{ path: '/topic/' + item.id }">
         <p class="article_title">
           {{ item.title }}
         </p>
