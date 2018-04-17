@@ -1,17 +1,19 @@
 <template>
-  <ul @touchstart="hover($event, '#f4f4f6')" @touchend="hover($event, '#fff')">
+  <ul>
     <li class="home_list_item" v-for="item in items" :key="item.id">
-      <p class="article_title">
-        {{ item.title }}
-      </p>
-      <div class="article_msg_wrapper">
+      <router-link :to="{ path: '/article/' + item.id }">
+        <p class="article_title">
+          {{ item.title }}
+        </p>
+        <div class="article_msg_wrapper">
         <span class="photo_img">
           <img src="../../assets/logo.png" alt="">
         </span>
-        <span class="article_author">
+          <span class="article_author">
            {{ item.author }}
         </span>
-      </div>
+        </div>
+      </router-link>
     </li>
   </ul>
 </template>
@@ -30,6 +32,9 @@
             item.style.background = color;
           }
         },
+      },
+      created () {
+        console.log(this.$store);
       }
     }
 </script>
@@ -39,9 +44,6 @@
     background: #fff;
     margin-bottom: 15px;
     padding: 5vw;
-    &:hover {
-      background: #f4f4f6;
-    }
     .article_title {
       font-size: 14px;
       line-height: 1.5;
