@@ -6,12 +6,12 @@
           {{ item.title }}
         </p>
         <div class="article_msg_wrapper">
-        <span class="photo_img">
-          <img src="../../assets/logo.png" alt="">
-        </span>
-          <span class="article_author">
-           {{ item.author }}
-        </span>
+          <span class="photo_img">
+            <img src="../../assets/logo.png" alt="">
+          </span>
+            <span class="article_author">
+             {{ item.author }}
+          </span>
         </div>
       </router-link>
     </li>
