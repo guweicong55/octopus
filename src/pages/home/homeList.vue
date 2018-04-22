@@ -9,7 +9,7 @@
           <span class="photo_img">
             <img src="../../assets/logo.png" alt="">
           </span>
-            <span class="article_author">
+          <span class="article_author">
              {{ item.author }}
           </span>
         </div>

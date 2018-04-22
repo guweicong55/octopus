@@ -1,6 +1,6 @@
 <template>
   <div>
-    <head-component :searchShow="1"></head-component>
+    <head-component :searchShow="1" :logo="1"></head-component>
     <div class="article_list_wrapper">
       <home-list :items="list"></home-list>
     </div>

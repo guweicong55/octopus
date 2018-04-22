@@ -2,21 +2,33 @@
   <div style="min-height: 100vh; background: #fff">
     <head-component :backBtn="true"></head-component>
     <topic-list></topic-list>
-    <span class="add_argument_btn">
+    <span class="add_argument_btn" @click="textEditerController">
       <svg t="1523974973686" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="26905" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64"><<path d="M726.016 553.984l0-84.010667-171.989333 0 0-171.989333-84.010667 0 0 171.989333-171.989333 0 0 84.010667 171.989333 0 0 171.989333 84.010667 0 0-171.989333 171.989333 0zM512 86.016q176 0 301.013333 125.013333t125.013333 301.013333-125.013333 301.013333-301.013333 125.013333-301.013333-125.013333-125.013333-301.013333 125.013333-301.013333 301.013333-125.013333z" p-id="26906"></path></svg>
     </span>
+    <text-editer :show="textEditerFlag" :hide="textEditerController"></text-editer>
   </div>
 </template>
 <script>
   import headComponent from '@/components/header/headBar.vue';
   import topicList from './topicList';
+  import textEditer from '@/components/editer/textEditer.vue';
   export default {
     name: 'topicComponent',
     components: {
       headComponent,
-      topicList
+      topicList,
+      textEditer
+    },
+    data () {
+      return {
+        textEditerFlag: false
+      }
+    },
+    methods: {
+      textEditerController () {
+        this.textEditerFlag = !this.textEditerFlag;
+      }
     }
-
   }
 </script>
 <style scoped lang="less">
