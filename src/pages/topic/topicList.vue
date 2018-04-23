@@ -45,7 +45,7 @@
 
 <style scoped lang="less">
   #topic_conatiner {
-    padding: 0 5vw;
+    padding: 0 15px;
     min-height: 100%;
     /*background: #fff;
     border-bottom: 1px solid #dfdfe2;*/
@@ -61,7 +61,7 @@
       color: #555;
     }
     .topic_item {
-      padding: 5vw 0;
+      padding: 15px 0;
       /*border-bottom: 1px solid #e3e4e5;*/
     }
     .author_wrapper {

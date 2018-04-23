@@ -26,22 +26,20 @@
 <style scoped lang="less">
   .top_wrapper {
     width: 100%;
-    padding: 40px 15px 0;
+    padding: 40px 15px 20px;
     border-bottom: 1px solid #ddd;
     min-height: 134px;
     .me_photo {
-      height: 60px;
-      width: 60px;
-      position: absolute;
-      left: 15px;
-      top: 40px;
+      height: 80px;
+      width: 80px;
       background: #fff;
+      margin: 0 auto;
       border-radius: 50%;
       border: 1px solid #ddd;
       overflow: hidden;
     }
     .me_content_wrapper {
-      padding-left: 80px;
+      text-align: center;
       .me_name {
         font-size: 18px;
       }

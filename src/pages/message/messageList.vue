@@ -44,6 +44,7 @@
     overflow: hidden;
     border-bottom: 1px solid #eee;
     min-height: 96px;
+    display: flex;
     .msg_photo {
       position: absolute;
       left: 15px;
@@ -57,7 +58,6 @@
     }
     .msg_content {
       padding-left: 80px;
-      padding-right: 15px;
       .msg_content_details {
         color: #666;
         .creater {

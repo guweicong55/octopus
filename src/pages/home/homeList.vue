@@ -43,7 +43,7 @@
     width: 100%;
     background: #fff;
     margin-bottom: 15px;
-    padding: 5vw;
+    padding:15px;
     .article_title {
       font-size: 14px;
       line-height: 1.5;
