@@ -7,7 +7,7 @@
       <div class="me_content_wrapper">
         <h3 class="me_name">Madonaa</h3>
         <p class="me_msg">
-          <sub-btn>积分</sub-btn>
+          <sub-btn @click="print">积分</sub-btn>
           <sub-btn>铜币</sub-btn>
         </p>
       </div>
@@ -20,6 +20,11 @@
     name: 'meComponent',
     components: {
       subBtn
+    },
+    methods: {
+      print () {
+        console.log(123123)
+      }
     }
   }
 </script>

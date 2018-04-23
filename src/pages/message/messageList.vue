@@ -30,12 +30,13 @@
 
 <script>
   export default {
-      name: "messageList"
+    name: "messageList"
   }
 </script>
 
 <style scoped lang="less">
   @import "../../style/common";
+
   .message_item {
     width: 100%;
     background: #fff;

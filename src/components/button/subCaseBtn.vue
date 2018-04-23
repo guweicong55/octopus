@@ -1,17 +1,24 @@
 <template>
-  <span id="subCaseBtn">
-    <slot></slot>
+  <span id="subCaseBtn" @click="clickHandler">
+      <slot></slot>
   </span>
 </template>
 
 <script>
-    export default {
-        name: "subCaseBtn"
+  export default {
+    name: "subCaseBtn",
+    methods: {
+      clickHandler (e) {
+        this.$emit('click', e);
+      }
     }
+
+  }
 </script>
 
 <style scoped lang="less">
   @import "../../style/common";
+
   #subCaseBtn {
     height: 26px;
     line-height: 26px;
