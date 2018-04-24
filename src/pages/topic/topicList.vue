@@ -56,7 +56,7 @@
       padding-bottom: 16px;
     }
     .topic_discuss {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: normal;
       color: #555;
     }

@@ -9,6 +9,9 @@
           <p class="msg_content_details">
             <span class="creater">Maondddon: </span>用$nextTick呀，不管你是用v-if还
           </p>
+          <p class="msg_date">
+            2018年12月10日
+          </p>
         </div>
       </router-link>
     </li>
@@ -21,6 +24,9 @@
           <p class="msg_content_details">
             <span class="creater">阿福: </span>用$nextTick呀，不管你是用v-if还是v-show，dom要渲染之后才能focus，在本次dom渲染之后在nextTick里，dom一定可用，然后el.focus()就可以
             呀，不管你是用v-if还是v-show，dom要渲染之后才能focus，在本次dom渲染之后在nextTick里，dom一定可用，然后el.focus()就可以
+          </p>
+          <p class="msg_date">
+            2018年12月10日
           </p>
         </div>
       </router-link>
@@ -55,16 +61,18 @@
       border-radius: 50%;
       border: 1px solid #ddd;
       overflow: hidden;
-
     }
     .msg_content {
       padding-left: 80px;
       .msg_content_details {
-        color: #666;
+        color: #333;
         .creater {
           color: @baseColor;
           font-weight: bold;
         }
+      }
+      .msg_date {
+        margin-top: 10px;
       }
     }
   }

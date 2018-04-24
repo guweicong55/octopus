@@ -1,6 +1,6 @@
 <template>
   <div>
-    <head-component title="消息"></head-component>
+    <head-component title="Message" menu="1"></head-component>
     <message-list></message-list>
   </div>
 </template>

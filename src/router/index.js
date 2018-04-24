@@ -46,7 +46,7 @@ var router = new Router({
   ]
 });
 
-router.beforeEach((to, from, next) => {
+/*router.beforeEach((to, from, next) => {
   //需要隐藏的页面-对应router的name
   var pagesName = ['topic'];
 
@@ -54,6 +54,6 @@ router.beforeEach((to, from, next) => {
   store.commit('footBarShow', flag);
 
   next();
-});
+});*/
 
 export default router;

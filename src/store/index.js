@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 const state = {
   footBarShow: true
-}
+};
 
 export default new Vuex.Store({
   state,

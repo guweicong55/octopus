@@ -134,10 +134,14 @@ a:link,a:active,a:visited,a:hover {
 }
 
 body {
-  background: rgb(228,233,234);
+  background: rgb(241,242,246);
 }
 
 @baseColor: #0068ff;
+#cardShadow {
+  box-shadow: 0 2px 10px rgb(204,211,229);
+}
+
 #baseTransition (@timer: 0.1s) {
   transition: all @timer cubic-bezier(0.5, 0.01, 0, 0.99);
 }

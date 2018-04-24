@@ -1,9 +1,9 @@
 <template>
   <div id="search">
-    <svg @click="searchContainercontrol(true, false)" t="1523434667326" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="53202" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64"><path d="M406.016 598.016q80 0 136.021333-56.021333t56.021333-136.021333-56.021333-136.021333-136.021333-56.021333-136.021333 56.021333-56.021333 136.021333 56.021333 136.021333 136.021333 56.021333zM662.016 598.016l212.010667 212.010667-64 64-212.010667-212.010667 0-34.005333-11.989333-11.989333q-75.989333 66.005333-180.010667 66.005333-116.010667 0-196.992-80t-80.981333-196.010667 80.981333-196.992 196.992-80.981333 196.010667 80.981333 80 196.992q0 104.021333-66.005333 180.010667l11.989333 11.989333 34.005333 0z" p-id="53203"></path></svg>
-    <div class="search_container" :class="{ search_container_show: searchContainerShow }">
-      <button @click="searchContainercontrol(false, true)">关闭</button>
-    </div>
+    <svg @click="searchContainercontroll(true, false)" t="1523434667326" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="53202" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64"><path d="M406.016 598.016q80 0 136.021333-56.021333t56.021333-136.021333-56.021333-136.021333-136.021333-56.021333-136.021333 56.021333-56.021333 136.021333 56.021333 136.021333 136.021333 56.021333zM662.016 598.016l212.010667 212.010667-64 64-212.010667-212.010667 0-34.005333-11.989333-11.989333q-75.989333 66.005333-180.010667 66.005333-116.010667 0-196.992-80t-80.981333-196.010667 80.981333-196.992 196.992-80.981333 196.010667 80.981333 80 196.992q0 104.021333-66.005333 180.010667l11.989333 11.989333 34.005333 0z" p-id="53203"></path></svg>
+    <!--<div class="search_container" :class="{ search_container_show: searchContainerShow }">
+      <button @click="searchContainercontroll(false, true)">关闭</button>
+    </div>-->
   </div>
 </template>
 <script>
@@ -19,7 +19,7 @@
       ...mapMutations([
         'footBarShow'
       ]),
-      searchContainercontrol (s, f) {
+      searchContainercontroll (s, f) {
         this.searchContainerShow = s;
         this.footBarShow(f);
       }
@@ -39,6 +39,7 @@
       position: fixed;
       top: 100vh;
       left: 0;
+      z-index: 99;
       #baseTransition();
     }
     .search_container_show {
@@ -48,6 +49,7 @@
       height: 28px;
       width: 28px;
       margin-top: 11px;
+      fill: @baseColor;
     }
   }
 </style>
