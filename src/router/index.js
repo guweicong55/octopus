@@ -8,6 +8,11 @@ import HomeComponent from '@/pages/home/homeComponent';
 import meComponent from '@/pages/me/meComponent';
 import topicComponent from '@/pages/topic/topicComponent';
 
+Router.prototype.goBack = function () {
+  this.isBack = true
+  window.history.go(-1)
+}
+
 Vue.use(Router);
 
 var router = new Router({
