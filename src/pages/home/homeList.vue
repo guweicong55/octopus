@@ -53,8 +53,7 @@
     padding:15px;
     #cardShadow;
     .topic_title {
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: 18px;
       color: #444;
       font-weight: bold;
     }
