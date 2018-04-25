@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition :name="transitionName">
+    <transition<!-- :name="transitionName"-->>
       <router-view class="Router"></router-view>
     </transition>
   </div>
@@ -20,7 +20,6 @@
     },
     watch: {
       '$route' (to, from) {
-        console.log(to, from);
         let isBack = this.$router.isBack; //监听路由变化时的状态为前进还是后退
         if (isBack) {
           this.transitionName = 'slide-right'

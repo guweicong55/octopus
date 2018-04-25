@@ -3,7 +3,7 @@
     <span class="title" v-if="title">
       {{ title }}
     </span>
-    <div v-if="backBtn" class="back_btn" @click="$router.goBack()">
+    <div v-if="backBtn" class="back_btn" @click="$router.back()">
       <svg t="1523952904258" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="26557" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64"><path d="M854.016 470.016l0 84.010667-520.021333 0 237.994667 240-59.989333 59.989333-342.016-342.016 342.016-342.016 59.989333 59.989333-237.994667 240 520.021333 0z" p-id="26558"></path></svg>
     </div>
     <div class="menu" style="float: right" v-if="menu">
