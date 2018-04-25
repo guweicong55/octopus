@@ -50,13 +50,13 @@
     /*background: #fff;
     border-bottom: 1px solid #dfdfe2;*/
     .topic_title {
-      font-size: 18px;
+      font-size: 24px;
       font-weight: bold;
       color: #333;
       padding-bottom: 16px;
     }
     .topic_discuss {
-      font-size: 12px;
+      font-size: 16px;
       font-weight: normal;
       color: #555;
     }

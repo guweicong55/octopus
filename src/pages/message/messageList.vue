@@ -66,6 +66,7 @@
       padding-left: 80px;
       .msg_content_details {
         color: #333;
+        font-size: 16px;
         .creater {
           color: @baseColor;
           font-weight: bold;

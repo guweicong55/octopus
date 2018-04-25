@@ -27,6 +27,7 @@
     z-index: 99;
     background: #fff;
     transform: translateY(100%);
+    opacity: 0;
     #baseTransition;
     .head {
       height: 51px;
@@ -74,5 +75,6 @@
   }
   .editer_show {
     transform: translateY(0) !important;
+    opacity: 1 !important;
   }
 </style>

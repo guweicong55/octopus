@@ -33,10 +33,10 @@
     width: 100vw;
     height: 51px;
     background: #fff;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
     position: relative;
     z-index: 1;
-    box-shadow: 0 2px 10px #ccd3e5;
+    /*box-shadow: 0 2px 10px #ccd3e5;*/
     .search_wrapper {
       float: right;
       height: 100%;
