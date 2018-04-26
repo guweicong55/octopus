@@ -1,27 +1,28 @@
 <template>
   <div>
-    <head-component :searchShow="1" :logo="1" :menu="1"></head-component>
-    <tab-switch :items="tabData"></tab-switch>
+    <head-component :searchShow="1" :logo="1" :menu="1" />
+    <tab-switch :items="tabData" />
     <div class="bill_board">
       <div class="bill_board_wrapper">
         <img src="../../../static/madonna.png" alt="">
       </div>
     </div>
-    <div class="topic_list_wrapper">
-      <home-list :items="list"></home-list>
-    </div>
+    <home-list :items="list" />
+    <publish-btn />
   </div>
 </template>
 <script>
     import headComponent from '@/components/header/headBar.vue';
     import homeList from './homeList.vue';
     import tabSwitch from '@/components/tab/tabSwitch.vue';
+    import publishBtn from './publishBtn';
     export default {
       name: 'homeComponent',
       components: {
         headComponent,
         homeList,
-        tabSwitch
+        tabSwitch,
+        publishBtn
       },
       data () {
         return {
@@ -56,9 +57,7 @@
 </script>
 <style scoped lang="less">
   @import "../../style/common";
-  .topic_list_wrapper {
-    width: 100vw;
-  }
+
   .bill_board {
     padding: 15px;
     .bill_board_wrapper {
