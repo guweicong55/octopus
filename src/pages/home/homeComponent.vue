@@ -1,6 +1,7 @@
 <template>
   <div>
     <head-component :searchShow="1" :logo="1" :menu="1"></head-component>
+    <tab-switch :items="tabData"></tab-switch>
     <div class="bill_board">
       <div class="bill_board_wrapper">
         <img src="../../../static/madonna.png" alt="">
@@ -14,14 +15,27 @@
 <script>
     import headComponent from '@/components/header/headBar.vue';
     import homeList from './homeList.vue';
+    import tabSwitch from '@/components/tab/tabSwitch.vue';
     export default {
       name: 'homeComponent',
       components: {
         headComponent,
-        homeList
+        homeList,
+        tabSwitch
       },
       data () {
         return {
+          tabData: [
+            {
+              name: '全部'
+            },
+            {
+              name: '最新'
+            },
+            {
+              name: '精华'
+            }
+          ],
           list: [
             {
               id: 1,
