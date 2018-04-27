@@ -9,6 +9,7 @@
     </div>
     <home-list :items="list" />
     <publish-btn />
+    <reload-btn :style="{ bottom: '5vw', left: '5vw' }" @click="reload" />
   </div>
 </template>
 <script>
@@ -16,22 +17,29 @@
     import homeList from './homeList.vue';
     import tabSwitch from '@/components/tab/tabSwitch.vue';
     import publishBtn from './publishBtn';
+    import reloadBtn from '@/components/button/reloadBtn.vue';
     export default {
       name: 'homeComponent',
       components: {
         headComponent,
         homeList,
         tabSwitch,
-        publishBtn
+        publishBtn,
+        reloadBtn
+      },
+      methods: {
+        reload () {
+          console.log(111);
+        }
       },
       data () {
         return {
           tabData: [
             {
-              name: '全部'
+              name: '推荐'
             },
             {
-              name: '最新'
+              name: '关注'
             },
             {
               name: '精华'
