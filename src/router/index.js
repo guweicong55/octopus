@@ -7,6 +7,7 @@ import MsgComponent from '@/pages/message/msgComponent';
 import HomeComponent from '@/pages/home/homeComponent';
 import meComponent from '@/pages/me/meComponent';
 import topicComponent from '@/pages/topic/topicComponent';
+import searchComponent from '@/pages/search/searchComponent';
 
 /*Router.prototype.goBack = function () {
   this.isBack = true
@@ -53,6 +54,11 @@ var router = new Router({
           path: '/topic/:id',
           name: 'topic',
           component: topicComponent
+        },
+        {
+          path: '/search',
+          name: 'search',
+          component: searchComponent
         }
       ]
     }
@@ -60,11 +66,10 @@ var router = new Router({
 });
 
 /*router.beforeEach((to, from, next) => {
-  //需要隐藏的页面-对应router的name
-  var pagesName = ['topic'];
-
-  var flag = pagesName.indexOf(to.name) !== -1 ? false: true;
-  store.commit('footBarShow', flag);
+  console.log(to);
+  if (!to.name) {
+    return;
+  }
 
   next();
 });*/

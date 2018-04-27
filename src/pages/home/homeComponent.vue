@@ -29,7 +29,7 @@
       },
       methods: {
         reload () {
-          console.log(111);
+
         }
       },
       data () {

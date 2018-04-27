@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <transition<!-- :name="transitionName"-->>
-      <router-view class="Router"></router-view>
-    </transition>
-  </div>
+  <router-view class="Router"></router-view>
 </template>
 
 <script>
