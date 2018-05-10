@@ -55,10 +55,11 @@
       height: 100%;
       text-align: center;
       line-height: 50px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       color: #333;
-      padding-left: 15px;
+      position: absolute;
+      width: 100%;
     }
     .back_btn, .menu {
       float: left;

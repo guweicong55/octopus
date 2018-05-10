@@ -32,12 +32,7 @@
         }
       },
       methods: {
-        hover (e, color) {
-          var item = e.target;
-          if (item.className === 'home_list_item') {
-            item.style.background = color;
-          }
-        },
+
       },
       created () {
         //console.log(this.$store);
