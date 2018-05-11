@@ -2,11 +2,13 @@
   <div>
     <head-component :backBtn="true" title="搜索结果" />
     <home-list :items="list" />
+    <load-more>加载更多</load-more>
   </div>
 </template>
 <script>
   import headComponent from '@/components/header/headBar.vue';
   import homeList from '../home/homeList.vue';
+  import loadMore from '@/components/button/loadMore.vue'
   export default {
     name: 'searchResult',
     data () {
@@ -29,7 +31,8 @@
     },
     components: {
       headComponent,
-      homeList
+      homeList,
+      loadMore
     }
   }
 </script>

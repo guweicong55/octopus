@@ -12,7 +12,6 @@
         this.$emit('click', e);
       }
     }
-
   }
 </script>
 
@@ -20,14 +19,14 @@
   @import "../../style/common";
 
   #subCaseBtn {
-    height: 26px;
-    line-height: 26px;
-    border: 1px solid @baseColor;
-    border-radius: 5px;
+    height: 55px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
     text-align: center;
-    color: @baseColor;
-    display: inline-block;
     padding: 0 10px;
-    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #aaa;
+    display: block;
   }
 </style>

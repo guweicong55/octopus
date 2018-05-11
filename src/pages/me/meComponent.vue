@@ -32,12 +32,10 @@
   </div>
 </template>
 <script>
-  import subBtn from '@/components/button/subCaseBtn.vue';
   import headComponent from '@/components/header/headBar.vue';
   export default {
     name: 'meComponent',
     components: {
-      subBtn,
       headComponent
     },
     methods: {

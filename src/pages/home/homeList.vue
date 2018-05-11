@@ -3,7 +3,8 @@
     <li class="home_list_item" v-for="item in items" :key="item.id">
       <router-link :to="{ path: '/topic/' + item.id }">
         <p class="topic_title">
-          {{ item.title }}
+          {{ item.title.length > 30 ? item.title.substr(0, 30) + '...' : item.title }}
+          <span class="topic_plate" v-if="item.plate">{{ item.plate }}</span>
         </p>
         <p class="topic_describe">
           {{ item.describe }}
@@ -50,7 +51,10 @@
     .topic_title {
       font-size: 18px;
       color: #444;
-      font-weight: bold;
+      /*font-weight: bold;*/
+      .topic_plate {
+        color: #999;
+      }
     }
     .topic_describe {
       margin-top: 15px;

@@ -8,6 +8,7 @@
       </div>
     </div>
     <home-list :items="list" />
+    <load-more>加载更多</load-more>
     <publish-btn />
     <reload-btn :style="{ bottom: '5vw', left: '5vw' }" @click="reload" />
   </div>
@@ -18,6 +19,7 @@
     import tabSwitch from '@/components/tab/tabSwitch.vue';
     import publishBtn from './publishBtn';
     import reloadBtn from '@/components/button/reloadBtn.vue';
+    import loadMore from '@/components/button/loadMore.vue'
     export default {
       name: 'homeComponent',
       components: {
@@ -25,7 +27,8 @@
         homeList,
         tabSwitch,
         publishBtn,
-        reloadBtn
+        reloadBtn,
+        loadMore
       },
       methods: {
         reload () {
@@ -48,15 +51,17 @@
           list: [
             {
               id: 1,
-              title: '我们可以为组件的 prop 指定验证规则。如果传入的数据不符合要求，Vue 会发出警告。',
+              title: '为什么容易晕车？？？？',
               describe: 'Google\'s free service instantly translates words, phrases, and web pages between English and over 100 other languages.',
-              author: 'Madonna-Skoni'
+              author: 'Madonna-Skoni',
+              plate: '[汽车俱乐部]'
             },
             {
               id: 2,
-              title: '要指定验证规则，需要用对象的形式来定义 prop，而不能用字符串数组：',
+              title: '🔥🔥🔥要指定验证规则，需要用对象的形式来定义 prop，而不能用字符串数组：',
               describe: 'Google\'s free service instantly translates words, phrases, and web pages between English and over 100 other languages.',
-              author: '推塔呀呀呀'
+              author: '推塔呀呀呀',
+              plate: '[影音讨论区]'
             }
           ]
         }
