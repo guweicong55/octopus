@@ -4,20 +4,20 @@
       <router-link :to="{ path: '/topic/' + item.id }">
         <p class="topic_title">
           {{ item.title.length > 30 ? item.title.substr(0, 30) + '...' : item.title }}
-          <span class="topic_plate" v-if="item.plate">{{ item.plate }}</span>
+          <span class="topic_plate" v-if="item.sectionName">[{{ item.sectionName }}]</span>
         </p>
         <p class="topic_describe">
-          {{ item.describe }}
+          {{ item.content }}
         </p>
         <div class="topic_msg_wrapper">
           <span class="photo_img">
             <img src="../../assets/logo.png" alt="">
           </span>
           <span class="topic_author">
-             {{ item.author }}
+             {{ item.username }}
           </span>
           <span class="topic_briefly">
-             {{ 263 }} 条回复
+             {{ item.replyCount }} 条回复
           </span>
         </div>
       </router-link>
@@ -58,6 +58,7 @@
     }
     .topic_describe {
       margin-top: 15px;
+      font-size: 16px;
     }
     .topic_msg_wrapper {
       margin-top: 15px;

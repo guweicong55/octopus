@@ -9,6 +9,7 @@ import meComponent from '@/pages/me/meComponent';
 import topicComponent from '@/pages/topic/topicComponent';
 import searchComponent from '@/pages/search/searchComponent';
 import searchResult from '@/pages/search/searchResult';
+import loginComponent from '@/pages/sys/login';
 
 /*Router.prototype.goBack = function () {
   this.isBack = true
@@ -40,6 +41,11 @@ var router = new Router({
           path: '/home',
           name: 'home',
           component: HomeComponent
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: loginComponent
         },
         {
           path: '/msg',

@@ -19,7 +19,8 @@
     import tabSwitch from '@/components/tab/tabSwitch.vue';
     import publishBtn from './publishBtn';
     import reloadBtn from '@/components/button/reloadBtn.vue';
-    import loadMore from '@/components/button/loadMore.vue'
+    import loadMore from '@/components/button/loadMore.vue';
+    import Requester from '@/config/requester';
     export default {
       name: 'homeComponent',
       components: {
@@ -29,6 +30,13 @@
         publishBtn,
         reloadBtn,
         loadMore
+      },
+      created () {
+        Requester('/topic/all', {}).then(res => {
+          if (res.status === 1) {
+            this.list = this.list.concat(res.data.list);
+          }
+        });
       },
       methods: {
         reload () {
@@ -49,7 +57,7 @@
             }
           ],
           list: [
-            {
+            /*{
               id: 1,
               title: '为什么容易晕车？？？？',
               describe: 'Google\'s free service instantly translates words, phrases, and web pages between English and over 100 other languages.',
@@ -62,7 +70,7 @@
               describe: 'Google\'s free service instantly translates words, phrases, and web pages between English and over 100 other languages.',
               author: '推塔呀呀呀',
               plate: '[影音讨论区]'
-            }
+            }*/
           ]
         }
       }
