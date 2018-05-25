@@ -1,5 +1,5 @@
 import common from './common';
-import Router from 'vue-router';
+import router from '../router';
 
 export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
   type = type.toUpperCase();
@@ -39,10 +39,17 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
       const response = await fetch(url, requestConfig);
       const responseJson = await response.json();
       //如果没有权限则跳回登录
-      /*if (responseJson.code && responseJson.code === 403) {
-        Router.push('login');
+      if (responseJson.code && responseJson.code === 403) {
+        console.log(location.pathname);
+        let cbPath;
+        if (/#/.test(location.href)) {
+          cbPath = location.hash.replace('#', '');
+        } else {
+          cbPath = location.pathname;
+        }
+        router.push({ path: '/login', query: { cb: cbPath } });
         return;
-      }*/
+      }
       return responseJson
     } catch (error) {
       throw new Error(error)

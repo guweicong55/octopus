@@ -46,6 +46,10 @@
         this.loading = true;
         Requester('/login', { account: this.account, password: this.password }, 'post').then(res => {
           if (res.status === 1) {
+            if (this.$route.query.cb) {
+              this.$router.push(this.$route.query.cb);
+              return;
+            }
             //登录成功后保存用户信息到本地
             this.$router.push('/');
           } else {

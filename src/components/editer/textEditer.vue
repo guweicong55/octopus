@@ -2,17 +2,28 @@
     <div id="editer" :class="{ editer_show: show }">
       <div class="head">
         <span class="close_btn" @click="hide">关闭</span>
-        <span class="update_btn" @click="hide">发送</span>
+        <span class="update_btn" @click="submitContent">发送</span>
         <p class="title">回复主题</p>
       </div>
-      <textarea class="editer_area" name="" id="" cols="30" placeholder="内容" rows="10"></textarea>
+      <textarea v-model="content" class="editer_area" name="" id="" cols="30" placeholder="内容" rows="10"></textarea>
     </div>
 </template>
 
 <script>
   export default {
     name: "textEditer",
-    props: ['show', 'hide'],
+    props: ['show', 'hide', 'submit'],
+    data () {
+      return {
+        content: ''
+      }
+    },
+    methods: {
+      submitContent () {
+        console.log(this.content);
+        this.$emit('submit', this.content);
+      }
+    }
   }
 </script>
 

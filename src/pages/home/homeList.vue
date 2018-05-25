@@ -58,7 +58,7 @@
     }
     .topic_describe {
       margin-top: 15px;
-      font-size: 16px;
+      font-size: 14px;
     }
     .topic_msg_wrapper {
       margin-top: 15px;
