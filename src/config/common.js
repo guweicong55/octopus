@@ -1,3 +1,3 @@
 export default {
-  appName: 'http://192.168.1.155:7001/s1'
+  appName: 'http://192.168.1.100:7001/s1'
 }
