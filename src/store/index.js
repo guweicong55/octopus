@@ -5,7 +5,8 @@ import mutations from './mutations';
 Vue.use(Vuex);
 
 const state = {
-  footBarShow: true
+  footBarShow: true,
+  userName: ''
 };
 
 export default new Vuex.Store({
