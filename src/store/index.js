@@ -6,7 +6,6 @@ Vue.use(Vuex);
 
 const state = {
   footBarShow: true,
-  userName: ''
 };
 
 export default new Vuex.Store({
