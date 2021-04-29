@@ -11,6 +11,8 @@ import searchComponent from '@/pages/search/searchComponent';
 import searchResult from '@/pages/search/searchResult';
 import loginComponent from '@/pages/sys/login';
 
+import test from '@/pages/test';
+
 /*Router.prototype.goBack = function () {
   this.isBack = true
   window.history.go(-1)
@@ -30,7 +32,6 @@ var router = new Router({
   routes: [
     {
       path: '/',
-      name: 'App',
       component: App,
       children: [
         {
@@ -71,6 +72,11 @@ var router = new Router({
           path: '/sr/:title',
           name: 'searchResult',
           component: searchResult
+        },
+        {
+          path: '/test',
+          name: 'test',
+          component: test
         }
       ]
     }
